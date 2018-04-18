@@ -1,0 +1,41 @@
+<a href="/dashboard">Dashboard</a>
+<a href="/products">Products</a>
+<a href="/orders">Orders</a>
+<a href="/customers">Customers</a>
+<a href="">Settings</a>
+
+<div>
+    <form action="filter-dashboard" method="POST">
+        <input type="text" name="search" placeholder="search...">
+        <input type="submit" value="Filter">
+    </form>
+</div>
+
+
+<div>
+    <h1>Products</h1>
+    @foreach(var product in ViewBag.allProducts)
+    {
+        <img src="@product.image" alt="product-image">
+        <p>@product.productname</p>
+        <p>(@product.quantity left)</p>
+    }
+</div>
+<a href="/products">Show More...</a>
+
+<div>
+    <h1>Recent Orders</h1>
+    @foreach(var order in ViewBag.allOrders)
+    {
+        <p>@order.customer.name purchased @order.quantity_order @order.product.productname...(@order.order_duration)</p>
+    }
+</div>
+<a href="/orders">Show AllOrders..</a>
+<div>
+    <h1>New Customers</h1>
+    @foreach(var customer in ViewBag.allCustomers)
+    {
+        <p>@customer.name joined the store (@customer.duration)</p>
+    }
+</div>
+<a href="/customers">Show All Customers..</a>

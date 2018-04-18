@@ -1,0 +1,10 @@
+C:\Users\56ole\Documents\DOJO\DojoAssignments\netCore\ASP\ENTITY\eCommerce\bin\Debug\netcoreapp2.0\eCommerce.deps.json
+C:\Users\56ole\Documents\DOJO\DojoAssignments\netCore\ASP\ENTITY\eCommerce\bin\Debug\netcoreapp2.0\eCommerce.runtimeconfig.json
+C:\Users\56ole\Documents\DOJO\DojoAssignments\netCore\ASP\ENTITY\eCommerce\bin\Debug\netcoreapp2.0\eCommerce.runtimeconfig.dev.json
+C:\Users\56ole\Documents\DOJO\DojoAssignments\netCore\ASP\ENTITY\eCommerce\bin\Debug\netcoreapp2.0\eCommerce.dll
+C:\Users\56ole\Documents\DOJO\DojoAssignments\netCore\ASP\ENTITY\eCommerce\bin\Debug\netcoreapp2.0\eCommerce.pdb
+C:\Users\56ole\Documents\DOJO\DojoAssignments\netCore\ASP\ENTITY\eCommerce\obj\Debug\netcoreapp2.0\eCommerce.csproj.CoreCompileInputs.cache
+C:\Users\56ole\Documents\DOJO\DojoAssignments\netCore\ASP\ENTITY\eCommerce\obj\Debug\netcoreapp2.0\eCommerce.AssemblyInfoInputs.cache
+C:\Users\56ole\Documents\DOJO\DojoAssignments\netCore\ASP\ENTITY\eCommerce\obj\Debug\netcoreapp2.0\eCommerce.AssemblyInfo.cs
+C:\Users\56ole\Documents\DOJO\DojoAssignments\netCore\ASP\ENTITY\eCommerce\obj\Debug\netcoreapp2.0\eCommerce.dll
+C:\Users\56ole\Documents\DOJO\DojoAssignments\netCore\ASP\ENTITY\eCommerce\obj\Debug\netcoreapp2.0\eCommerce.pdb

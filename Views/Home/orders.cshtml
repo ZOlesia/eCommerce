@@ -1,0 +1,65 @@
+<a href="/dashboard">Dashboard</a>
+<a href="/products">Products</a>
+<a href="/orders">Orders</a>
+<a href="/customers">Customers</a>
+<a href="">Settings</a>
+
+
+<div>
+    <h2>Add a new order</h2>
+    <form action="/new-order" method="POST">
+    <br>
+    Customers 
+    <select name="customer" id="customer">
+        @foreach(var customer in ViewBag.customers)
+        {
+            <option value="@customer.customerid">@customer.name</option>
+        }
+    </select>
+    <br>
+    <span class="text-danger">@TempData["error"]</span>
+    <br>
+    Order <input type="number" name="quantity" min="1"> 
+    
+    <select name="product" id="product">
+        @foreach(var item in ViewBag.products)
+        {
+            <option value="@item.productid">@item.productname</option>
+        }
+    </select>
+    <br>
+    <input type="submit" value="Order">
+    </form>
+</div>
+
+
+
+<div>
+    <form action="">
+        <input type="text" placeholder="filter...">
+    </form>
+</div>
+
+
+
+<table>
+    <tr>
+        <th>Customer Name</th>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Date</th>
+    </tr>
+
+
+    
+    @foreach(var i in @ViewBag.qqq)
+    {
+        <tr>
+            <td>@i.customer.name</td>
+            <td>@i.product.productname</td>
+            <td>@i.quantity_order</td>
+            <td>@i.created_at.ToString("MMM dd, yyyy")</td>
+        </tr>
+    }
+</table>
+

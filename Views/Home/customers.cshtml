@@ -1,0 +1,54 @@
+<a href="/dashboard">Dashboard</a>
+<a href="/products">Products</a>
+<a href="/orders">Orders</a>
+<a href="/customers">Customers</a>
+<a href="">Settings</a>
+
+
+<div>
+    <h2>Add a new customer</h2>
+    <form action="/add-customer" method="POST">
+        <br>
+        <span class="text-danger">@TempData["error"]</span>
+        <br>
+        Customer Name: <input type="text" name="name">
+        <input type="submit" value="Add">
+    </form>
+</div>
+
+
+
+<div>
+    <form action="/search-name">
+        <input type="text" name="search" id="search" placeholder="search name...">
+    </form>
+    
+</div>
+
+
+
+<div>
+    <table id="clist">
+        <tr>
+            <th>Customer Name</th>
+            <th>Created Date</th>
+            <th>Actions</th>
+        </tr>
+        @foreach(var customer in @ViewBag.all_customers)
+        {
+            <tr>
+                <form action="/remove-customer" method="POST">
+                    <input type="hidden" name="customer_id" value="@customer.customerid">
+                    <td>@customer.name</td>
+                    <td>@customer.created_at.ToString("MMM dd, yyyy")</td>
+                    <td><input type="submit" value="Remove"></td>
+                </form>
+            </tr>
+        }
+    </table>
+</div>
+
+<script>
+    
+   
+</script>

@@ -1,0 +1,51 @@
+<a href="/dashboard">Dashboard</a>
+<a href="/products">Products</a>
+<a href="/orders">Orders</a>
+<a href="/customers">Customers</a>
+<a href="">Settings</a>
+
+<div>
+    <form action="/search-product" method="POST">
+        <input type="text" name="search" placeholder="search...">
+        <input type="submit" value="Filter"> 
+    </form>
+</div>
+<div>
+    <h2>Add a new product</h2>
+    @model eCommerce.Models.NewProductViewModel
+    <form asp-controller="Home" asp-action="CreateProduct" method="POST">
+        <span asp-validation-for="productname" class="text-danger"></span>
+        <br>
+        <label asp-for="productname"></label>
+        <input asp-for="productname" placeholder="name">
+        <br>
+        <span asp-validation-for="image" class="text-danger"></span>
+        <br>
+        <label asp-for="image"></label>
+        <input asp-for="image" placeholder="http://">
+        <br>
+        <span asp-validation-for="description" class="text-danger"></span>
+        <br>
+        <label asp-for="description"></label>
+        <textarea asp-for="description" ></textarea>
+        <br>
+        <span asp-validation-for="quantity" class="text-danger"></span>
+        <br>
+        <label asp-for="quantity"></label>
+        <input asp-for="quantity" placeholder="1">
+        <br>
+        <input type="submit" value="Create">
+    </form>
+</div>
+
+<div>
+    <h2>All Products</h2>
+    @foreach(Product product in @ViewBag.all_products)
+    {
+        <div>
+            <img src="@product.image" alt="image">
+            <p>@product.productname</p>
+            <p>(@product.quantity left)</p>
+        </div>
+    }
+</div>
